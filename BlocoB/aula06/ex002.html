@@ -8,25 +8,49 @@
         body{
             background-color: #9494e2;
         }
-        h1{
-            color: white;
-            font: normal 20pt Arial;
 
-        }
-        p{
-            color: white;
-            font: normal 20pt Arial;
+        div#res{
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
+    <h1>Soma de Valores</h1>
+    <input type="number" name="n1" id="n1"> +
+    <input type="number" name="n2" id="n2"> 
     
-    <h1>olá, mundo</h1>
-    <p>Já me livrei da maldição</p>
+    <input type="button" value="somar" onclick="somar()"> <!--O input type button, value= escrita dentro do botao, onclick = quando for clicar ele chama a função somar()-->
+    <div class="res">Resultado</div>
+    
 
     <script>
-        var nome = window.prompt("Qual é o seu nome?")// Vai perguntar seu nome...
-        window.alert("É um grande prazer em te conhecer, " + nome +"!")// sinal de + também é uma concatenação
+
+        function somar(){
+            var a = window.document.getElementById('n1') 
+            var b = window.document.getElementsByName('n2')[0]
+            
+            var res = window.document.querySelector('div.res')
+
+            var num1 = Number(a.value)
+            var num2 = Number(b.value)
+            
+            var s = num1 + num2 
+
+            res.innerHTML = `A soma entre ${num1} e ${num2} é igual a ${s}`
+            
+        }
+        var nome = window.prompt("Digite seu nome, por favor.")
+        window.alert("Olá " + nome + " seja bem-vindo(a) a nossa calculadora")
+        window.confirm("Aperte 'OK' para acessar a calculadora")
+
+
+
+
+
+
+
+        // var nome = window.prompt("Qual é o seu nome?")// Vai perguntar seu nome...
+        // window.alert("É um grande prazer em te conhecer, " + nome +"!")// sinal de + também é uma concatenação
 
     </script>
 </body>
