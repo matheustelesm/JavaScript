@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou não</title>
+</head>
+<body>
+    <h1>Você é brasileiro?</h1>
+
+    De qual país você é? <input type="text" name="txtvt" id="txtvt">
+    <input type="button" value="Verificar" onclick="ver()">
+    <div id="res"></div>
+
+    <script>
+        function ver() {
+            var txtv = document.getElementById('txtvt')
+            var res = document.getElementById("res")
+
+            if (txtv.value == "Brasil") {
+                res.innerHTML = "Você é Brasileiro"
+            } 
+
+            else {
+                res.innerHTML = "Você é estrangeiro"
+            }
+            res.innerHTML += `<p>Você nasceu no <strong>${txtv.value}</strong></p>`
+
+        }
+    </script>
+</body>
+</html>
