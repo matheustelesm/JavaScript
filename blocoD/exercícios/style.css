@@ -17,14 +17,29 @@ header{
     
 }
 
+header h1{
+    padding: 15px;
+}
+
 section {
     width: 500px;
-    height: 500px;
+    
     border-radius: 10px;
     background-color: white;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
     margin: auto;
     padding: 15px;
+}
+
+#imagem{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: auto;
+}
+div{
+    text-align: center;
+    padding: 8px;
 }
 
 footer {
